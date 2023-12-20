@@ -3,187 +3,310 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigitalOcean</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><button>Products<< /button>
-            </li>
-            <li><button>Solutions</button></li>
-            <li><button>Businesses</button></li>
-            <li>pricing</li>
-        </ul>
-        <ul>
-            <li>Log in</li>
-            <li>Sign up</li>
-        </ul>
+    <nav class="navbar">
+        <div class="container">
+            <img src="data:image/png;base64,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"
+                class="navbar-brand">
+            <ul class="navbar-nav">
+                <li class="nav-item"><button class="btn-li">Products</button></li>
+                <li class="nav-item"><button class="btn-li">Solutions</button></li>
+                <li class="nav-item"><button class="btn-li">Developers</button></li>
+                <li class="nav-item"><button class="btn-li">Bussines</button></li>
+                <li class="nav-item"><button class="btn-li">Pricing</button></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="#" class="btn btn-secondary">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+            </div>
     </nav>
-    <header>
-        <h1>Dream it. Build it. Grow it.</h1>
-        <p>Whatever your vision—a SaaS app, an AI/ML business, a website, an eCommerce store—build it here using DigitalOcean's
-            simple, cost-effective cloud hosting services.</p>
-        <div>
-            <button>Sign up with email</button>
-            <button>Sign up with Google</button>
-            <button>Sign up with GitHub</button>
+    <header class="header text-white width-100 py-50">
+        <h1 class="text-center text-white">Dream it. Build it. Grow it.</h1>
+        <p class="text-center mx-20-percentage">
+            Whatever your vision—a SaaS app, an AI/ML business, a website, an eCommerce store—build it here using
+            DigitalOcean's simple, cost-effective cloud hosting services.</p>
+        <div class="flex flex-row justify-content-center buttons">
+            <button class="btn btn-rounded btn-white sign-email">Sign up with email</button>
+            <button class="btn btn-rounded btn-white flex flex-row align-items-center">
+                <img class="btn-icon" src="https://www.digitalocean.com/_next/static/media/google-logo.74668a95.svg" alt="">
+                <div>Sign up with Google</div>
+            </button>
+            <button class="btn btn-rounded btn-white flex flex-row align-items-center">
+                <img class="btn-icon" src="https://www.digitalocean.com/_next/static/media/github-logo.7b98a572.svg" alt="">
+                <div>Sign up with GitHub</div>
+            </button>
         </div>
         <div>
-            <img src="https://www.digitalocean.com/_next/static/media/dashboardMockup.89c79826.svg">
-            <article>
-                <p>#1</p>
-                <p>In IaaS usability, VPS for SMBs, &amp; SMB Hosting on G2</p>
-            </article>
-            <article>
-                <p>15</p>
-                <p>Globally distributed datacenters</p>
-            </article>
-            <article>
-                <p>99.99%</p>
-                <p>Uptime SLA for Droplets and Volumes block storage</p>
-            </article>
-            <article>
-                <p>&gt;600k</p>
-                <p>Customers building with DigitalOcean</p>
-            </article>
+            <div class="flex flex-row justify-content-center my-50">
+                <img class="img img-rounded mx-5"
+                    src="https://www.digitalocean.com/_next/static/media/dashboardMockup.89c79826.svg" />
+            </div>
+            <div class="flex flex-row justify-content-center mx-5 stats">
+                <article>
+                    <h5>#1</h5>
+                    <p class="text-white">In IaaS usability, VPS for SMBs, &amp; SMB Hosting on G2</p>
+                    </article>
+                    <article>
+                    <h5>15</h5>
+                    <p class="text-white">Globally distributed datacenters</p>
+                    </article>
+                    <article>
+                    <h5>99.99%</h5>
+                    <p class="text-white">Uptime SLA for Droplets and Volumes block storage</p>
+                    </article>
+                    <article>
+                    <h5>&gt;600k</h5>
+                    <p class="text-white">Customers building with DigitalOcean</p>
+                    </article>
+                    </div>
         </div>
     </header>
-    <section>
-        <h2>Join the many businesses saving up to 50% or more with DigitalOcean</h2>
-        <p>Are the ever-increasing cloud costs on AWS, GCP, and Azure severely impacting your bottom line? Reach out to
-            our team of
-            experts and we’ll show how you can significantly reduce your bill for the same
-            consistent infrastructure experience.</p>
-        <p>>Reach out to our cloud experts</p>
-    </section>
-    <section>
-            <h2> How real businesses use DigitalOcean to accelerate their growth</h2>
-            <div>
-                <h4>How H Grant Design uses Cloudways managed hosting to manage client websites.</h4>
-                <p>“For me, support is
-                    key. If a company provides amazing support, that goes above anything else.
-                    Cloudways offers fantastic support. The easy installation of WordPress is also
-                    really impressive. I can get a new install done within 2 minutes, and it 'just
+    <section class="text-white rounded mx-20-percentage cards my-50" id="join-many-business">
+        <div class="width-70-percentage-cente">
+            <h2>Join the many businesses saving up to 50% or more with DigitalOcean</h2>
+            <p>
+                Are the ever-increasing cloud costs on AWS, GCP, and Azure severely impacting your bottom line? Reach
+                out to
+                our team of
+                experts and we’ll show how you can significantly reduce your bill for the same
+                consistent infrastructure experience.</p>
+            <p>Reach out to our cloud experts -></p>
             </div>
     </section>
-    <section>
-                <h3>Build and scale WordPress &amp; PHP websites effortlessly with Cloudways</h3>
-                <p>Over 90,000 digital agencies &amp; ecommerce businesses enjoy hassle-free managed
-                    website hosting with Cloudways. Get started with $100 in free credit.</p>
-                <p>Start my free trial</p>
+    <section class="my-50" id="real-business">
+        <h2 class="text-center width-70-percentage-center">How real businesses use DigitalOcean to accelerate their growth
+        </h2>
+        <div class="my-10 cards rounded ml-10-percentage mr-60-percentage text-white" id="how_h-grant">
+            <h4 class="mb-20">How H Grant Design uses Cloudways managed hosting to manage client websites.</h4>
+            <p class="mb-20">
+                “For me, support is
+                key. If a company provides amazing support, that goes above anything else.
+                Cloudways offers fantastic support. The easy installation of WordPress is also
+                really impressive. I can get a new install done within 2 minutes, and it 'just
+            </p>
+            <a>Read the interview -></a>
+        </div>
     </section>
-    <section>
-        <div>
-            <h2>Benefits to activate the builder in you</h2>
-            <p>From simple tools and
-                predictable pricing to support designed for growing businesses, DigitalOcean's cloud is built to
-                serve the unique needs of startups and SMBs.</p>
-            <div>
-                <p>Build and ship faster using simple tools</p>
-                <p>All of our products are built with simplicity at their core, so you can spend
-                    your time focusing on building apps, not infrastructure.</p>
-            </div>
-        </div>
-                <p>Grow profitably with predictable cloud costs</p>
-                <p>Our predictable pricing and leading price-to-performance ratio contribute to
-                an ROI of 186% according to a Forrester study</p>
-        </div>
-        <div>
-                <p>Reduce your roadblocks with dedicated support</p>
-            <p>Get free, personalized support or upgrade to paid plans to receive dedicated
-                help and faster response times.</p>
-        </div>
-        <div>
-            <p>Improve customer experience by building on a reliable platform</p>
-            <p>Deliver superior customer experience with our globally distributed platform,
-                minimal downtime, and intuitive products.</p>
+    <section class="background-darkblue text-white rounded mx-20-percentage cards my-50">
+        <div class="width-70">
+            <h2>Build and scale WordPress & PHP websites effortlessly with Cloudways</h2>
+            <p>
+                Over 90,000 digital agencies & ecommerce businesses enjoy hassle-free managed website hosting with
+                Cloudways. Get started with $100 in free credit.</p>
+            <p>Start my free trial</p>
         </div>
     </section>
     <section>
-                <h3>Quick product tours</h3>
-                <p>Check out our brief product tours to see how simple, easy, and pleasant it is to use
-                    DigitalOcean's cloud hosting products.
-                    </p>Take a tour</p>
+        <h2 class="text-center">Benefits to activate the builder in you</h2>
+        <p class="text-center text-gray my-10 width-70-percentage-center">
+            From simple tools and
+            predictable pricing to support designed for growing businesses, DigitalOcean's cloud is built to
+            serve the unique needs of startups and SMBs.
+            </p>
+            <div class="py-50 flex flex-row justify-content-center w-90-percentage-center">
+                <div class="px-20">
+                    <div class="py-50 px-30 my-30 card-box-shadow rounded">
+                        <div class="flex flex-row">
+                            <div class="flex flex-column align-items-center card-icon-left">
+                                <img src="https://www.digitalocean.com/_next/static/media/bar-chart.656d9366.png" alt="">
+                            </div>
+                            <div class="text-gray">
+                                <h3>Build and ship faster using simple tools</h3>
+                                <p>All of our products are built with simplicity at their core, so you can spend
+                                    your time focusing on building apps, not infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-50 px-30 my-30 card-box-shadow rounded">
+                        <div class="flex flex-row">
+                            <div class="flex flex-column align-items-center card-icon-left">
+                                <img src="https://www.digitalocean.com/_next/static/media/dollar-up-splash.6b8727f3.png" alt="">
+                            </div>
+                            <div class="text-gray">
+                                <h3>Grow profitably with predictable cloud costs</h3>
+                                <p>Our predictable pricing and leading price-to-performance ratio contribute to
+                                    an ROI of 186% according to a Forrester study</p>
+                            </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="px-20">
+                        <div class="py-50 px-30 my-30 card-box-shadow rounded">
+                            <div class="flex flex-row">
+                                <div class="flex flex-column align-items-center card-icon-left">
+                                    <img src="https://www.digitalocean.com/_next/static/media/speech-bubbles.cc4ac392.png" alt="">
+                                </div>
+                                <div class="text-gray">
+                                    <h3>Reduce your roadblocks with dedicated support</h3>
+                                    <p>Get free, personalized support or upgrade to paid plans to receive dedicated
+                                        help and faster response times.</p>
+                                </div>
+                    </div>
+                    </div>
+                    <div class="py-50 px-30 my-30 card-box-shadow rounded">
+                        <div class="flex flex-row">
+                            <div class="flex flex-column align-items-center card-icon-left">
+                                <img src="https://www.digitalocean.com/_next/static/media/arrows.5086d9da.png" alt="">
+                            </div>
+                            <div class="text-gray">
+                                <h3>Improve customer experience by building on a reliable platform</h3>
+                                <p>Deliver superior customer experience with our globally distributed platform,
+                                    minimal downtime, and intuitive products.</p>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
     </section>
-    <div>
-        <h2>A cloud for your entire journey</h2>
-            <p>DigitalOcean’s suite of products is designed to be with you on every step of
+    <section class="background-darkblue text-white rounded mx-15-percentage cards my-50">
+        <div class="ml-10-percentage width-70" id="quick-product-tours">
+            <h2>Quick product tours</h2>
+            <p>Check out our brief product tours to see how simple, easy, and pleasant it is to use
+                DigitalOcean's cloud hosting products.</p>
+                <a href="" class="text-white">Take a tour</a>
+                </div>
+    </section>
+    <section>
+        <div class="text-center">
+            <h2>A cloud for your entire journey</h2>
+            <p class="text-gray">DigitalOcean’s suite of products is designed to be with you on every step of
                 your journey, whether you want to do it yourself or get help from the
                 experts.</p>
-        <p>See all products</p>
-    </div>
-    <div>
-        <h3>Managed hosting</h3>
-        <p>Cloudways is a fully-managed cloud hosting solution for digital agencies
-            &amp; ecommerce businesses. Built to deliver performance without
-            complexity.</p>
-        <p>Learn more</p>
-    </div>
-    <div>
-        <h3>Virtual machines</h3>
-            <p>DigitalOcean Droplets are simple, scalable virtual machines
-                for all your web hosting and VPShosting needs.
-            </p> Learn more</p>
-    </div>
-    <div>
-            <h3>Kubernetes</h3>
-            <p>DigitalOcean Kubernetes is a managed solution that is easy to scale and
-                includes a 99.5% SLA for HA and free control plane.</p>
-        <p>Learn more</p>
-    </div>
-    <div>
-        <h3>App Platform </h3>
-        <p>Build and deploy apps without managing infrastructure with DigitalOcean’s
-            Platform as a Service and serverless solutions.</p>
-        <p>Learn more</p>
-    </div>
-    <div>
-        <h3>Managed data bases</h3>
-            <p>Managed MongoDB, Kafka, MySQL, PostgreSQL, and Managed Databases for
-                Redis®* let you focus on your apps while we update and scale your
-                databases.</p>
-        <p>Learn more</p>
-    </div>
-    <div>
-        <h3>Storage</h3>
-        <p>DigitalOcean Spaces object storage and Volumes block storage are
-            business-ready storage solutions.</p>
-        <p>Learn more</p>
-    </div>
-    <div>
-    <p>*Redis is a registered trademark of Redis
-        Ltd. Any rights therein are reserved to Redis Ltd. Any use by DigitalOcean is for
-        referential purposes only and does not indicate any sponsorship, endorsement or affiliation
-        between Redis and DigitalOcean.</p>
-    </div>
-    <div>
+            <p>See all products</p>
+            </div>
+        <div class="w-80-percentage-center">
+            <div class="flex flex-row justify-content-between">
+                <div class="w-28-percentage py-50 px-30 card-box-shadow my-30 rounded">
+                    <div class="card-header-icon flex flex-row mb-30">
+                        <img src="https://www.digitalocean.com/_next/static/media/cloudways-logo.4b393732.svg" alt="">
+                        <h3>Managed hosting</h3>
+                    </div>
+                    <p>Cloudways is a fully-managed cloud hosting solution for digital agencies
+                        &amp; ecommerce businesses. Built to deliver performance without
+                        complexity.</p>
+<p class="my-20">Learn more</p>
+</div>
+                <div class="w-28-percentage py-50 px-30 card-box-shadow my-30 rounded flex flex-column">
+                    <div class="card-header-icon flex flex-row mb-30">
+                        <img src="https://www.digitalocean.com/_next/static/media/droplets-icon.b6e4bb89.svg" alt="">
+                        <h3>Virtual machines</h3>
+                    </div>
+                    <p>DigitalOcean Droplets are simple, scalable virtual machines
+                        for all your web hosting and VPShosting needs.</p>
+                        <p class="my-20">Learn more</p>
+                        </div>
+                <div class="w-28-percentage py-50 px-30 card-box-shadow my-30 rounded">
+                    <div class="card-header-icon flex flex-row mb-30">
+                        <img src="https://www.digitalocean.com/_next/static/media/kubernetes-icon.bab9c67d.svg" alt="">
+                        <h3>Kubernetes</h3>
+                    </div>
+                    <p>DigitalOcean Kubernetes is a managed solution that is easy to scale and
+                        includes a 99.5% SLA for HA and free control plane.</p>
+<p class="my-20">Learn more</p>
+</div>
+            </div>
+            <div class="flex flex-row justify-content-between">
+                <div class="w-28-percentage py-50 px-30 card-box-shadow my-30 rounded">
+                    <div class="card-header-icon flex flex-row mb-30">
+            
+                        <img src="https://www.digitalocean.com/_next/static/media/app-platform-icon.699988d5.svg" alt="">
+                        <h3>App Platform </h3>
+                    </div>
+                    <p>Build and deploy apps without managing infrastructure with DigitalOcean’s
+                        Platform as a Service and serverless solutions.</p>
+<p class="my-20">Learn more</p>
+</div>
+                <div class="w-28-percentage py-50 px-30 card-box-shadow my-30 rounded">
+                    <div class="card-header-icon flex flex-row mb-30">
+                
+                        <img src="https://www.digitalocean.com/_next/static/media/managed-databases-icon.34e236c6.svg" alt="">
+                        <h3>Managed data bases</h3>
+                    </div>
+                    <p>Managed MongoDB, Kafka, MySQL, PostgreSQL, and Managed Databases for
+                        Redis®* let you focus on your apps while we update and scale your
+                        databases.</p>
+<p class="my-20">Learn more</p>
+</div>
+                <div class="w-28-percentage py-50 px-30 card-box-shadow my-30 rounded">
+                    <div class="card-header-icon flex flex-row mb-30">
+                
+                        <img src="https://www.digitalocean.com/_next/static/media/spaces-storage-icon.847a812f.svg" alt="">
+                        <h3>Storage</h3>
+                    </div>
+                    <p>DigitalOcean Spaces object storage and Volumes block storage are
+                        business-ready storage solutions.</p>
+<p class="my-20">Learn more</p>
+</div>
+            </div>
+            <div class="text-center mx-25-percentage mt-40">
+                <small class="text-gray"><sup>*</sup>Redis is a registered trademark of Redis
+                    Ltd. Any rights therein are reserved to Redis Ltd. Any use by DigitalOcean is for
+                    referential purposes only and does not indicate any sponsorship, endorsement or affiliation
+                    between Redis and DigitalOcean.</small>
+                    </div>
+        </div>
+        </section>
+        <section class="text-center my-50">
         <h2>Learn from the experts</h2>
-                <p>Whether you want to learn about funding your business, installing Linux on
-                    Ubuntu, or getting started on DigitalOcean, we have the educational
-                    resources for you.</p>
-    </div>
-    <div>
-        <h3>Product documentation</h3>
-        <p>Learn how to spin up a virtual machine, get started with block storage,
-            and more with in-depth documentation.</p>
-        <p>Learn more</p>
-    </div>
-    <div>
-        <h3>Business advice</h3>
-        <p>The Wave is DigitalOcean’s hub for startup and business-focused content
-            on funding, hiring, and scaling.</p>
-        <p>Learn more</p>
-    </div>
-    <div>
-        <h3>Technical expertise</h3>
-        <p>Visit DigitalOcean’s Community Website and CSS-Tricks to learn from wide
-            range of technical tutorials.</p>
-        <p>Learn more</a></p>
-    </div>
-</section>
+        <p class="width-70-percentage-center text-gray">Whether you want to learn about funding your business, installing Linux
+            on
+            Ubuntu, or getting started on DigitalOcean, we have the educational
+            resources for you.</p>
+        <div class="my-50 flex flex-row justify-content-between w-90-percentage-center" id="learn-form-experts">
+            <div class="text-left cards rounded card-box-shadow p-0">
+                <img class="card-img img-top-rounded"
+                    src="https://www.digitalocean.com/_next/static/media/digitalocean-docs.26159f78.svg" alt="">
+                <div class="card-body">
+                    <h3 class="mb-20 mt-40">Product documentation</h3>
+                    <p class="mb-20">Learn how to spin up a virtual machine, get started with block storage,
+                        and more with in-depth documentation.</p>
+                        <br>
+                        <a href="#" class="my-20">Learn More</a>
+                        <br>
+                        </div>
+            </div>
+            <div class="text-left cards rounded card-box-shadow p-0">
+                <img class="card-img img-top-rounded"
+                    src="https://www.digitalocean.com/_next/static/media/boat-storm-lighthouse.4bdddec0.png" alt="">
+                <div class="card-body">
+                    <h3 class="mb-20 mt-40">Business advice</h3>
+                    <p>The Wave is DigitalOcean’s hub for startup and business-focused content
+                        on funding, hiring, and scaling.</p>
+                        <br>
+                        <a href="#" class="my-20">Learn More</a>
+                        <br>
+                        </div>
+            </div>
+            <div class="text-left cards rounded card-box-shadow p-0">
+                <img class="card-img img-top-rounded"
+                    src="https://www.digitalocean.com/_next/static/media/heart-speech-bubble-asterisk-graphic.6eb0678f.svg" alt="">
+                <div class="card-body">
+                    <h3 class="mb-20 mt-40">Technical expertise</h3>
+                    <p>Visit DigitalOcean’s Community Website and CSS-Tricks to learn from wide
+                        range of technical tutorials.</p>
+                        <br>
+                        <a href="#" class="my-20">Learn More</a>
+                        <br>
+                        </div>
+                        </div>
+                        </div>
+    </section>
+    <section class="py-70 text-center background-color-light-blue">
+        <div>
+            <h2>Start building today</h2>
+            <p>Sign up now and you'll be up and running on DigitalOcean in just minutes.</p>
+            <button class="my-30 p-30 btn btn-rounded btn-white">Sign up to get started</button>
+            </div>
+    </section>
 </body>
 
 </html>
