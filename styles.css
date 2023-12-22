@@ -22,9 +22,7 @@ h4 {
     font-size: 18px;
 }
 
-#how_h-grant h4 {
-    margin-bottom: 20px;
-}
+
 
 small {
     font-size: 1.5rem;
@@ -34,9 +32,7 @@ small {
     color: #4D5B7C;
 }
 
-#join-many-business {
-    background-image: url('https://www.digitalocean.com/_next/static/media/dollar-sign-coin-in-clouds.7b5c62b9.svg');
-}
+
 
 .text-lightgray {
     color: lightgray;
@@ -155,19 +151,7 @@ small {
     margin-right: 50px;
 }
 
-.stats>article {
-    padding: 50px 50px;
-}
 
-.stats>article>h5 {
-    color: blue;
-    font-weight: 700;
-    font-size: 48px;
-}
-
-.stats p {
-    color: gray;
-}
 
 .width-100 {
     width: 100% !important;
@@ -214,7 +198,7 @@ header>h1 {
 }
 
 .sign-email {
-    color: darkblue;
+    color: #002C9B;
 }
 
 .card-box-shadow {
@@ -309,9 +293,6 @@ header>h1 {
     font-weight: 700;
 }
 
-#learn-form-experts .cards {
-    width: 25%;
-}
 
 .rounded {
     border: 10px solid transparent;
@@ -345,9 +326,6 @@ header>h1 {
 
 }
 
-#how_h-grant {
-    background-color: #0069FF;
-}
 
 .my-50 {
     margin-top: 50px !important;
@@ -440,4 +418,327 @@ header>h1 {
     width: 80px;
     margin-left: 20px;
     margin-right: 20px;
+}
+.header {
+    color: white;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #0069FF;
+}
+
+.header-text {
+    text-align: center;
+    color: #FFF
+}
+
+.sign-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.sign-in-button-email {
+    padding: 5px;
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: white;
+    color: #002C9B;
+}
+
+.sign-in-buttons {
+    padding: 5px;
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: white;
+    color: #002C9B;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-icon {
+    width: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.img-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 850px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.stats>article {
+    padding: 50px 50px;
+}
+
+.stats>article>h5 {
+    color: blue;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.stats p {
+    color: gray;
+}
+
+.join-section {
+    color: #FFF;
+    border-radius: 40px;
+    padding: 20px;
+    border: 1px solid transparent;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#join-many-business {
+    background-image: url('https://www.digitalocean.com/_next/static/media/dollar-sign-coin-in-clouds.7b5c62b9.svg');
+}
+
+.join-text {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.real-business {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#real-business {
+    background-color: #E0EDFF;
+    padding-bottom: 40px;
+}
+
+.real-businness-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.real-businness-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    margin-left: 10%;
+    margin-right: 60%;
+    color: white;
+}
+
+#how_h-grant {
+    background-color: #0069FF;
+}
+
+#how_h-grant h4 {
+    margin-bottom: 20px;
+}
+
+.sidney-section {
+    background-color: #002C9B;
+    color: white;
+    border-radius: 40px;
+    padding: 20px;
+    border: 1px solid transparent;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 70%;
+    min-width: 100px;
+}
+
+.benefits-header {
+    text-align: center;
+}
+
+.benefits-header-text {
+    text-align: center;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.benefits-cards-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.benefits-cards {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 10px solid transparent;
+    border-radius: 40px;
+}
+
+.benefits-card-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.benefits-card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.benefits-card-text {
+    color: gray;
+}
+
+.benefits-separation {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.product-section {
+    background-color: #002C9B;
+    color: #FFF;
+    border-radius: 40px;
+    padding: 20px;
+    border: 1px solid transparent;
+    margin-left: 15%;
+    margin-right: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-text {
+    margin-left: 10%;
+    width: 70%;
+    min-width: 100px;
+}
+
+#quick-product-tours h2,
+#quick-product-tours p {
+    margin-bottom: 20px;
+}
+
+.product-link {
+    color: #FFF;
+}
+
+.jouney-section {
+    text-align: center;
+}
+
+.journey-header-text {
+    color: gray;
+}
+
+.journey-cards-alignment {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cards-separation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-box {
+    width: 28%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 10px solid transparent;
+    border-radius: 40px;
+    display: flex;
+}
+
+.journey-cards-img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.jouney-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.journey-footer {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 40px;
+    color: gray;
+}
+
+.learn-section {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.learn-header {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    color: gray;
+}
+
+.learn-cards-separation {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#learn-form-experts .cards {
+    width: 25%;
 }
